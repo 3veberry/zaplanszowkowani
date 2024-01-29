@@ -1,0 +1,404 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+}
+
+body {
+    background-color: #E0FFFF;
+    margin: 0 auto;
+}
+
+/*sekcja nawigacyjna*/
+
+nav{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+nav a{
+    padding: 64px 60px;
+}
+.kostka{
+    height: auto;
+    
+}
+
+.logo{
+    font-size: 18px;
+    color: #FFF;
+}
+ nav a{
+    font-size: 20px;
+    text-decoration: none;
+    color: #FFF;
+    font-weight: bold;
+    transition: font-size 750ms linear;
+ }
+ nav a:hover{
+    background-color: #1C6EFC;
+    
+    
+ }
+ nav a:active{
+    font-weight: bolder;
+    color:#474747;
+ }
+
+ header {
+    background-color: #0E3880;
+    margin-bottom: 25px;
+ }
+ /*koniec sekcji nawigacyjnej*/
+
+.grid-container{
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr;
+    gap: 50px;    
+    margin-bottom: 25px;
+    
+}
+
+.image-one {
+    background-image: url("../cover.jpg");
+    margin: 5px;
+}
+
+.background {
+    background-color: #FFF;
+    border-radius: 5px;
+    box-shadow: 2px 2px rgba(0, 0, 0, 0.05);
+}
+
+.text {
+    display: grid;
+    justify-items: center;  
+}
+
+
+/*ball section */
+.ball-container{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    border: 1px solid black;
+    padding-left: 25px;
+    padding-right: 25px;
+
+}
+
+.float-circle{
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+    justify-self: center;
+    background-color: black;
+    position: relative;
+    transition-property: bottom;
+    transition-duration: 3s;
+}
+.floor{
+    width: 100%;
+    height: 30px;
+    background: #6df0c2;    
+    
+}
+   
+.platform {
+    width: 100px;
+    height: 50px;
+    background: #efd9ca;
+    }
+    
+.plat-floor{
+    align-self: end;
+    justify-self: center;
+}
+
+   /*end of ball section*/ 
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    background-color: white;
+    width: 400px;
+    height: 750px;
+    margin: 25px;
+    border-radius: 5px;
+    box-shadow: 2px 2px rgba(0, 0, 0, 0.05);
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+      
+}
+
+.card-image {
+    margin: 5px;
+    height: 400px; 
+    background-size: cover;    
+    
+}
+
+.card h2 {
+    justify-self: center;
+    
+}
+.card p {
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: -60px
+}
+
+
+.image-two {
+    background-image: url("../laying-down-cards.jpg");
+}
+.image-three {
+    background-image: url("../scoring-par.jpg");
+}
+.image-four {
+    background-image: url("../scoring-par-2.jpg") ;
+}
+.additional-information {
+    background-color: #0B2D66;
+    color: white;
+    padding: 15px;
+    
+}
+.additional-information h2 {
+    margin: 50px;
+    text-align: center;
+
+}
+.additional-information p {
+    margin: 25px;
+    text-align: center;
+    list-style: none;
+}
+footer h2 {
+    padding: 25px;
+    text-align: center;
+    
+}
+footer {
+    background-color: #1BA7F5;
+}
+
+/*responsive*/
+
+@media only screen and (min-width: 320px) and (max-width:480px) {
+    /*logo */
+    nav {
+        grid-template-columns: 1fr 1fr;
+    }
+    nav a {
+        font-size: 15px;
+        padding: 20px 20px;
+    }
+    .kostka {
+        size: 15px;     
+    }
+    .logo {
+        font-size: 15px;
+    }
+    header h1 {
+        grid-column: 1/ span1;
+    }
+    /* okładka */
+    
+    .grid-container {
+        grid-template-columns: 1fr;
+        gap: 5px;     
+        
+    }
+    .text h2 {
+        align-items: center;
+    }
+    .text p {
+        text-align: center;
+    }
+    .container {
+        flex-direction: column;
+        align-items: center;
+    
+    }
+    .card { 
+        width: 250px;
+        height: 425px;
+        
+    }
+    .image-two, .image-three, .image-four {
+        height: 200px;
+    }
+    .card h2 {
+        text-align: center;
+        font-size: 16px;
+    }
+    .card p {
+        font-size: 12px;
+    }
+    
+    .additional-information h2 {
+        text-align: center;
+        
+    }
+    .additional-information ul li {
+        text-align: center;
+        margin: 15px;
+    }
+}
+
+
+@media only screen and (min-width: 480px) and (max-width:720px){
+    nav {
+        grid-template-columns: 1fr 1fr;
+    }
+    nav a {
+        font-size: 18px;
+        padding: 20px 20px;
+    }
+    .kostka {
+        size: 15px;
+        
+    }
+    .logo {
+        font-size: 18px;
+    }
+    header h1 {
+        grid-column: 1/ span1;
+    }
+    /*koniec sekcji nav */
+
+    .grid-container {
+        grid-template-columns: 1fr;
+        gap: 5px;     
+        
+    }
+    .text h2 {
+        align-items: center;
+    }
+    .text p {
+        text-align: center;
+    }
+    .container {
+        flex-wrap: wrap;
+        align-items: flex-start;
+    }
+    .card { 
+        width: 250px;
+        height: 425px;
+    }
+    .image-two, .image-three, .image-four {
+        height: 200px;
+    }
+    .card h2 {
+        text-align: center;
+        font-size: 16px;
+    }
+    .card p {
+        font-size: 12px;
+    }
+    
+    .additional-information h2 {
+        text-align: center;
+        
+    }
+    .additional-information ul li {
+        text-align: center;
+        margin: 15px;
+    }
+}
+
+
+
+@media only screen and (min-width: 720px) and (max-width: 980px) {
+    /*logo */
+    nav {
+        grid-template-columns: 1fr 1fr;
+    }
+    nav a {
+        font-size: 20px;
+        padding: 20px 20px;
+    }
+    .kostka {
+        size: 15px;
+        
+    }
+    .logo {
+        font-size: 20px;
+    }
+    header h1 {
+        grid-column: 1/ span1;
+    }
+
+
+    .grid-container {
+        grid-template-columns: 1fr;
+        gap: 5px;        
+    }
+    .text h2 {
+        align-items: center;
+    }
+    .text p {
+        text-align: center;
+    }
+    .container {
+        flex-wrap: wrap;
+        align-items: flex-start;
+    }
+    .card { 
+        width: 250px;
+        height: 425px;
+    }
+    .image-one{
+        height: 550px;
+    }
+    .image-two, .image-three, .image-four {
+        height: 200px;
+    }
+    .card h2 {
+        text-align: center;
+        font-size: 16px;
+    }
+    .card p {
+        font-size: 12px;
+    }
+    
+    .additional-information h2 {
+        text-align: center;
+        
+    }
+    .additional-information ul li {
+        text-align: center;
+        margin: 15px;
+    }
+
+}
+
+
+@media only screen and (min-width: 980px) and (max-width: 1200px) {
+    .grid-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 5px;        
+    }
+    .ball-container{
+        grid-column: 1/span2;
+    }
+    .text h2 {
+        align-items: center;
+    }
+    .text p {
+        text-align: center;
+    }
+
+    .container {
+        flex-wrap: wrap;
+        align-items: flex-start;
+    }
+   
+}
